@@ -1,25 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { RenderAfterNavermapsLoaded } from "react-naver-maps";
+import Lunch from "./components/lunch/lunch";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RenderAfterNavermapsLoaded
+      ncpClientId={"h0nir5z22z"} // 자신의 네이버 계정에서 발급받은 Client ID
+      error={<p>Maps Load Error</p>}
+      loading={<p>Maps Loading...</p>}
+    >
+      <Lunch />
+    </RenderAfterNavermapsLoaded>
   );
 }
 
