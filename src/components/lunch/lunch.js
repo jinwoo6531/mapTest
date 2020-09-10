@@ -22,7 +22,7 @@ function lunch() {
           height: "100vh", // 네이버지도 세로 길이
         }}
         defaultCenter={{ lat: 37.554722, lng: 126.970833 }} // 지도 초기 위치
-        defaultZoom={13} // 지도 초기 확대 배율
+        defaultZoom={11} // 지도 초기 확대 배율
       >
         {data.map((item) => {
           if (item.content === "비트교육센터") {
@@ -45,7 +45,7 @@ function lunch() {
                 }}
               />
             );
-          } else {
+          } else if (item.content === "지영이집") {
             return (
               <Marker
                 key={1}
@@ -60,7 +60,43 @@ function lunch() {
                   coords: [0, 12, 12, 0, 24, 12, 12, 32, 0, 12],
                   type: "poly",
                 }}
-                // onClick={modalHandler}
+                onClick={() => alert("지영이네집")}
+              />
+            );
+          } else if (item.content === "바울이집") {
+            return (
+              <Marker
+                key={1}
+                position={new navermaps.LatLng(item.lat, item.lng)}
+                icon={{
+                  url: markerPng,
+                  size: { width: 24, height: 32 },
+                  scaledSize: { width: 24, height: 32 },
+                  anchor: { x: 12, y: 32 },
+                }}
+                shape={{
+                  coords: [0, 12, 12, 0, 24, 12, 12, 32, 0, 12],
+                  type: "poly",
+                }}
+                onClick={() => alert("바울이네집")}
+              />
+            );
+          } else if (item.content === "재영이집") {
+            return (
+              <Marker
+                key={1}
+                position={new navermaps.LatLng(item.lat, item.lng)}
+                icon={{
+                  url: markerPng,
+                  size: { width: 24, height: 32 },
+                  scaledSize: { width: 24, height: 32 },
+                  anchor: { x: 12, y: 32 },
+                }}
+                shape={{
+                  coords: [0, 12, 12, 0, 24, 12, 12, 32, 0, 12],
+                  type: "poly",
+                }}
+                onClick={() => alert("재영이네집")}
               />
             );
           }
