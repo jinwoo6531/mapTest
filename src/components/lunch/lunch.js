@@ -13,7 +13,7 @@ function lunch() {
       <div id="navbar">방문한곳 체크!</div>
       <div id="infoBox">
         <div id="infoTitle">현재 날짜</div>
-        <div id="infoContent">2020.07.10</div>
+        <div id="infoContent">2020.09.10</div>
       </div>
       <NaverMap
         mapDivId={"maps-getting-started-uncontrolled"} // default: react-naver-map
