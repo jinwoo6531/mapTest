@@ -10,7 +10,7 @@ function lunch() {
 
   return (
     <>
-      <div id="navbar">방문한곳 체크!</div>
+      <div id="navbar">집ㅎㅎ</div>
       <div id="infoBox">
         <div id="infoTitle">현재 날짜</div>
         <div id="infoContent">2020.09.10</div>
